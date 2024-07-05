@@ -6,7 +6,7 @@ export default function About() {
         backgroundColor:'white',
     })
 
-    const [btntext, setBtnText] = useState("Dark Mode")
+    const [btntext, setBtnText] = useState("Dark Mode");
     
     const toggleStyle = () => {
         if(myStyle.color === 'black'){
@@ -15,20 +15,20 @@ export default function About() {
                 backgroundColor:'black',
                 border: '1px solid white' 
             })
-            setBtnText("Light Mode")
+            setBtnText("Light Mode");
         } else {
             setMyStyle({
                 color: 'black',
                 backgroundColor:'white'
             })
-            setBtnText("Dark Mode")
+            setBtnText("Dark Mode");
         }
     }
 
   return (
     <div className='container' style = {myStyle}>
         <div className="accordion" id="accordionExample">
-        <h2 classNameName="my-2">About Us</h2>
+        <h2 className="my-2">About Us</h2>
         <div className="accordion-item" style = {myStyle}>
             <h2 className="accordion-header" id="headingOne">
             <button className="accordion-button" style = {myStyle} type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
