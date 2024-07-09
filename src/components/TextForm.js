@@ -1,29 +1,31 @@
 import React, {useState} from 'react';
 
-
-
 export default function TextForm(props) {
     const handleUpClick = () => {
         // console.log("Upper Case Clicked" + text);
         let newText = text.toUpperCase();
         setText(newText); 
+        props.showAlert("Converted to uppercase!", "success");
     }
 
     const handleLoClick = () => {
         // console.log("Upper Case Clicked" + text);
         let newText = text.toLowerCase();
         setText(newText); 
+        props.showAlert("Converted to lowercase!", "success");
     }
 
     const handleClearClick = () => {
         let newText = "";
         setText(newText); 
+        props.showAlert("Text cleared", "success");
     }
 
     const handleCopyClick = () => {
         var text = document.getElementById("myBox");
         text.select();
         navigator.clipboard.writeText(text.value);
+        props.showAlert("Copied to clipboard!", "success");
     }
 
     const handleOnChange = (event) => {
